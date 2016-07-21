@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day_01___SimpleStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-wA-iZ5" userLabel="Time View">
+                                <rect key="frame" x="5" y="21" width="588" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rje-yu-ZmU" userLabel="Time Label">
+                                        <rect key="frame" x="0.0" y="35" width="588" height="127"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="51"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-8M-ecU">
+                                        <rect key="frame" x="542" y="5" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="7T3-rF-fHc"/>
+                                            <constraint firstAttribute="height" constant="30" id="jQf-H5-qQX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHk-Qf-laD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Rje-yu-ZmU" firstAttribute="leading" secondItem="wpi-wA-iZ5" secondAttribute="leading" id="COX-KP-rVk"/>
+                                    <constraint firstItem="Rje-yu-ZmU" firstAttribute="bottom" secondItem="wpi-wA-iZ5" secondAttribute="bottom" constant="-8" id="EQJ-rf-3mE"/>
+                                    <constraint firstItem="bC3-8M-ecU" firstAttribute="top" secondItem="wpi-wA-iZ5" secondAttribute="top" constant="5" id="ETa-gz-KPb"/>
+                                    <constraint firstItem="Rje-yu-ZmU" firstAttribute="top" secondItem="bC3-8M-ecU" secondAttribute="bottom" id="MbV-VY-E89"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rje-yu-ZmU" secondAttribute="trailing" id="jPe-Io-uu4"/>
+                                    <constraint firstItem="bC3-8M-ecU" firstAttribute="trailing" secondItem="wpi-wA-iZ5" secondAttribute="trailing" id="rxV-ef-Oqi"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A7-wj-MzB" userLabel="Play Btn">
+                                <rect key="frame" x="0.0" y="199" width="300" height="293"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.38823529410000002" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="ZU3-JC-8y0"/>
+                                </constraints>
+                                <state key="normal" image="play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZU3-JC-8y0"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uik-B6-caO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkS-ay-pjG" userLabel="Pause Btn">
+                                <rect key="frame" x="300" y="200" width="300" height="293"/>
+                                <color key="backgroundColor" red="0.63969185926238403" green="0.82033253205128209" blue="0.47441256794138859" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="Mv3-FY-TcP"/>
+                                </constraints>
+                                <state key="normal" image="pause"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Mv3-FY-TcP"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChP-ZN-1Ce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NkS-ay-pjG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ITz-z2-N9d"/>
+                            <constraint firstItem="wpi-wA-iZ5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="13" id="IUN-Qb-kam"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wpi-wA-iZ5" secondAttribute="bottom" constant="409" id="IgL-uY-JSU"/>
+                            <constraint firstItem="0A7-wj-MzB" firstAttribute="top" secondItem="wpi-wA-iZ5" secondAttribute="bottom" constant="8" symbolic="YES" id="JuH-sX-q67"/>
+                            <constraint firstItem="NkS-ay-pjG" firstAttribute="leading" secondItem="0A7-wj-MzB" secondAttribute="trailing" constant="11" id="Kfz-ba-7BT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NkS-ay-pjG" secondAttribute="bottom" constant="107" id="O2f-UC-5UB"/>
+                            <constraint firstItem="NkS-ay-pjG" firstAttribute="leading" secondItem="0A7-wj-MzB" secondAttribute="trailing" id="O4O-Uk-IFi"/>
+                            <constraint firstItem="0A7-wj-MzB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pam-Wd-XZ5"/>
+                            <constraint firstAttribute="trailing" secondItem="NkS-ay-pjG" secondAttribute="trailing" id="Smq-pf-kvG"/>
+                            <constraint firstItem="NkS-ay-pjG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="aCx-9c-4ZH"/>
+                            <constraint firstAttribute="trailing" secondItem="NkS-ay-pjG" secondAttribute="trailing" id="bhc-CY-BBN"/>
+                            <constraint firstItem="wpi-wA-iZ5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-15" id="c8O-ZU-C8w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0A7-wj-MzB" secondAttribute="bottom" constant="108" id="fEo-rT-mxm"/>
+                            <constraint firstItem="NkS-ay-pjG" firstAttribute="top" secondItem="wpi-wA-iZ5" secondAttribute="bottom" constant="9" id="iAO-Ps-Bhc"/>
+                            <constraint firstItem="NkS-ay-pjG" firstAttribute="leading" secondItem="0A7-wj-MzB" secondAttribute="trailing" constant="11" id="qpU-oH-TWK"/>
+                            <constraint firstItem="0A7-wj-MzB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="252" id="v2Z-dB-ffA"/>
+                            <constraint firstItem="wpi-wA-iZ5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="zXe-fP-03t"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="v2Z-dB-ffA"/>
+                                <exclude reference="Kfz-ba-7BT"/>
+                                <exclude reference="Smq-pf-kvG"/>
+                                <exclude reference="bhc-CY-BBN"/>
+                                <exclude reference="qpU-oH-TWK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pauseBtn" destination="NkS-ay-pjG" id="JO8-7p-Ftj"/>
+                        <outlet property="playBtn" destination="0A7-wj-MzB" id="H4M-Xg-hir"/>
+                        <outlet property="resetBtn" destination="bC3-8M-ecU" id="w8Y-9P-iod"/>
+                        <outlet property="timeLabel" destination="Rje-yu-ZmU" id="s9L-Q5-QVt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="42" height="56"/>
+        <image name="play" width="48" height="61"/>
+    </resources>
+</document>
